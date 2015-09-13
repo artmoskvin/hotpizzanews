@@ -17,14 +17,6 @@ client = pytumblr.TumblrRestClient(
 token = 'b9ba254626a6de4540e8c3b59aba0ddb5ff87aabb38d98d5c4fb3a1dcac440ae4ea35827db7d91fd8b630'
 gid = '62148300'
 album = '183278429'
-pic = 'tumblr_nsq76yXfgK1qa6w7zo1_1280.jpg'
-
-
-def save_image(i):
-    pic_url = client.posts('hotpizzanews')['posts'][i]['photos'][0]['original_size']['url']
-    filename = pic_url.split('/')[-1]
-    urllib.urlretrieve(pic_url, filename)
-    return
 
 
 def post_to_vk(token, gid, album, pic):
